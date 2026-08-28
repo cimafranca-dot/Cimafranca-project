@@ -143,7 +143,7 @@
         </div>
 
 
-        <!-- SEARCH + CATEGORY -->
+<!-- SEARCH + CATEGORY -->
 
         <div class="menu-controls">
 
@@ -152,7 +152,6 @@
                 id="search"
                 placeholder="🔍 Search menu..."
                 onkeyup="filterMenu()">
-
 
             <select
                 id="category"
@@ -178,15 +177,25 @@
                     Dessert
                 </option>
 
+                <option value="bread">
+                    Bread
+                </option>
+
+                <option value="frappe">
+                    Frappe
+                </option>
+
+                <option value="pastry">
+                    Pastry
+                </option>
+
             </select>
 
         </div>
 
-
         <!-- ================= PRODUCTS ================= -->
 
         <div class="menu-grid" id="menu-grid">
-
 
             <!-- PRODUCT 1 -->
 
@@ -233,7 +242,6 @@
 
             </div>
 
-
             <!-- PRODUCT 2 -->
 
             <div
@@ -278,7 +286,6 @@
                 </div>
 
             </div>
-
 
             <!-- PRODUCT 3 -->
 
@@ -325,7 +332,6 @@
 
             </div>
 
-
             <!-- PRODUCT 4 -->
 
             <div
@@ -370,7 +376,6 @@
                 </div>
 
             </div>
-
 
             <!-- PRODUCT 5 -->
 
@@ -417,7 +422,6 @@
 
             </div>
 
-
             <!-- PRODUCT 6 -->
 
             <div
@@ -463,10 +467,135 @@
 
             </div>
 
+            <!-- PRODUCT 7 - BREAD -->
+            <div class="product-card" data-name="Pandesal (6 pcs)" data-category="bread">
+                <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=700&q=85" alt="Pandesal">
+                <div class="product-info">
+                    <span class="category">Bread</span>
+                    <h3>Pandesal (6 pcs)</h3>
+                    <p>Classic soft Filipino bread, best with coffee in the morning.</p>
+                    <div class="product-bottom">
+                        <strong>₱50</strong>
+                        <button onclick="addToCart('Pandesal (6 pcs)', 50)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 8 - BREAD -->
+            <div class="product-card" data-name="Cheese Ensaymada" data-category="bread">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=85" alt="Cheese Ensaymada">
+                <div class="product-info">
+                    <span class="category">Bread</span>
+                    <h3>Cheese Ensaymada</h3>
+                    <p>Fluffy and buttery with sweet cheese topping.</p>
+                    <div class="product-bottom">
+                        <strong>₱65</strong>
+                        <button onclick="addToCart('Cheese Ensaymada', 65)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 9 - BREAD -->
+            <div class="product-card" data-name="Garlic Bread" data-category="bread">
+                <img src="https://images.unsplash.com/photo-1619531038897-deaff57a9df3?auto=format&fit=crop&w=700&q=85" alt="Garlic Bread">
+                <div class="product-info">
+                    <span class="category">Bread</span>
+                    <h3>Garlic Bread</h3>
+                    <p>Toasted bread with garlic butter and herbs, super crispy.</p>
+                    <div class="product-bottom">
+                        <strong>₱70</strong>
+                        <button onclick="addToCart('Garlic Bread', 70)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 10 - FRAPPE -->
+            <div class="product-card" data-name="Mocha Frappe" data-category="frappe">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85" alt="Mocha Frappe">
+                <div class="product-info">
+                    <span class="category">Frappe</span>
+                    <h3>Mocha Frappe</h3>
+                    <p>Chilled coffee blended with chocolate and creamy milk.</p>
+                    <div class="product-bottom">
+                        <strong>₱130</strong>
+                        <button onclick="addToCart('Mocha Frappe', 130)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 11 - FRAPPE -->
+            <div class="product-card" data-name="Caramel Frappe" data-category="frappe">
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=700&q=85" alt="Caramel Frappe">
+                <div class="product-info">
+                    <span class="category">Frappe</span>
+                    <h3>Caramel Frappe</h3>
+                    <p>Sweet caramel blended with coffee and topped with whipped cream.</p>
+                    <div class="product-bottom">
+                        <strong>₱135</strong>
+                        <button onclick="addToCart('Caramel Frappe', 135)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 12 - FRAPPE -->
+            <div class="product-card" data-name="Strawberry Frappe" data-category="frappe">
+                <img src="https://images.unsplash.com/photo-1553530666-ba11a985da69?auto=format&fit=crop&w=700&q=85" alt="Strawberry Frappe">
+                <div class="product-info">
+                    <span class="category">Frappe</span>
+                    <h3>Strawberry Frappe</h3>
+                    <p>Refreshing strawberry blended with ice and sweet cream.</p>
+                    <div class="product-bottom">
+                        <strong>₱125</strong>
+                        <button onclick="addToCart('Strawberry Frappe', 125)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 13 - PASTRY -->
+            <div class="product-card" data-name="Chocolate Croissant" data-category="pastry">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=85" alt="Chocolate Croissant">
+                <div class="product-info">
+                    <span class="category">Pastry</span>
+                    <h3>Chocolate Croissant</h3>
+                    <p>Flaky croissant filled with rich melted chocolate.</p>
+                    <div class="product-bottom">
+                        <strong>₱85</strong>
+                        <button onclick="addToCart('Chocolate Croissant', 85)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 14 - PASTRY -->
+            <div class="product-card" data-name="Cinnamon Roll" data-category="pastry">
+                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=700&q=85" alt="Cinnamon Roll">
+                <div class="product-info">
+                    <span class="category">Pastry</span>
+                    <h3>Cinnamon Roll</h3>
+                    <p>Soft roll with cinnamon sugar and sweet glaze.</p>
+                    <div class="product-bottom">
+                        <strong>₱80</strong>
+                        <button onclick="addToCart('Cinnamon Roll', 80)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 15 - PASTRY -->
+            <div class="product-card" data-name="Cheese Danish" data-category="pastry">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85" alt="Cheese Danish">
+                <div class="product-info">
+                    <span class="category">Pastry</span>
+                    <h3>Cheese Danish</h3>
+                    <p>Buttery pastry with creamy cheese filling.</p>
+                    <div class="product-bottom">
+                        <strong>₱90</strong>
+                        <button onclick="addToCart('Cheese Danish', 90)">Add +</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </section>
-
 
     <!-- ================= CART ================= -->
 
