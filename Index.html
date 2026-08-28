@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>D' Sunny Café</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="Index.html" class="logo">
+                ☀️ D' Sunny Café
+            </a>
+
+            <div class="nav-links">
+
+                <a href="Index.html">Home</a>
+
+                <a href="#menu">Menu</a>
+
+                <a href="About.html">About</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <button class="cart-button" onclick="goToCart()">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                WELCOME TO D' SUNNY CAFÉ
+            </p>
+
+            <h1>
+                A little sunshine<br>
+                in every cup. ☀️
+            </h1>
+
+            <p class="hero-description">
+                Fresh coffee, delicious treats, and a cozy
+                place to brighten your day.
+            </p>
+
+            <a href="#menu" class="main-button">
+                Explore Our Menu
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section class="intro">
+
+        <div class="intro-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85"
+                alt="Cozy cafe">
+
+        </div>
+
+
+        <div class="intro-text">
+
+            <p class="eyebrow">
+                ABOUT OUR CAFÉ
+            </p>
+
+            <h2>
+                Good coffee.<br>
+                Good food.<br>
+                Good mood.
+            </h2>
+
+            <p>
+                D' Sunny Café is a cozy local café where
+                customers can enjoy freshly prepared drinks
+                and delicious food.
+            </p>
+
+            <p>
+                Whether you're studying, meeting friends,
+                or simply taking a break, we have a sunny
+                little spot waiting for you.
+            </p>
+
+            <a href="About.html" class="outline-button">
+                Learn More About Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section id="menu" class="menu-section">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                OUR MENU
+            </p>
+
+            <h2>
+                Customer Favorites
+            </h2>
+
+            <p>
+                Freshly prepared and made with care.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH + CATEGORY -->
+
+        <div class="menu-controls">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Search menu..."
+                onkeyup="filterMenu()">
+
+
+            <select
+                id="category"
+                onchange="filterMenu()">
+
+                <option value="all">
+                    All Items
+                </option>
+
+                <option value="coffee">
+                    Coffee
+                </option>
+
+                <option value="drinks">
+                    Drinks
+                </option>
+
+                <option value="food">
+                    Food
+                </option>
+
+                <option value="dessert">
+                    Dessert
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <div class="menu-grid" id="menu-grid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div
+                class="product-card"
+                data-name="Classic Coffee"
+                data-category="coffee">
+
+                <img
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=85"
+                    alt="Classic Coffee">
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Coffee
+                    </span>
+
+                    <h3>
+                        Classic Coffee
+                    </h3>
+
+                    <p>
+                        Freshly brewed coffee with a rich,
+                        smooth flavor.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₱80
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Classic Coffee', 80)">
+
+                            Add +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div
+                class="product-card"
+                data-name="Iced Latte"
+                data-category="drinks">
+
+                <img
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85"
+                    alt="Iced Latte">
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Drinks
+                    </span>
+
+                    <h3>
+                        Iced Latte
+                    </h3>
+
+                    <p>
+                        Smooth espresso mixed with
+                        creamy chilled milk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₱110
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Iced Latte', 110)">
+
+                            Add +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div
+                class="product-card"
+                data-name="Matcha Latte"
+                data-category="drinks">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=700&q=85"
+                    alt="Matcha Latte">
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Drinks
+                    </span>
+
+                    <h3>
+                        Matcha Latte
+                    </h3>
+
+                    <p>
+                        Creamy matcha drink with
+                        a refreshing taste.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₱120
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Matcha Latte', 120)">
+
+                            Add +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div
+                class="product-card"
+                data-name="Butter Croissant"
+                data-category="food">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85"
+                    alt="Butter Croissant">
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Food
+                    </span>
+
+                    <h3>
+                        Butter Croissant
+                    </h3>
+
+                    <p>
+                        Golden and crispy with
+                        a delicious buttery flavor.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₱75
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Butter Croissant', 75)">
+
+                            Add +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div
+                class="product-card"
+                data-name="Chocolate Cake"
+                data-category="dessert">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85"
+                    alt="Chocolate Cake">
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Dessert
+                    </span>
+
+                    <h3>
+                        Chocolate Cake
+                    </h3>
+
+                    <p>
+                        Moist chocolate cake topped
+                        with creamy frosting.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₱120
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Chocolate Cake', 120)">
+
+                            Add +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div
+                class="product-card"
+                data-name="Strawberry Cake"
+                data-category="dessert">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=85"
+                    alt="Strawberry Cake">
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Dessert
+                    </span>
+
+                    <h3>
+                        Strawberry Cake
+                    </h3>
+
+                    <p>
+                        Soft cake with sweet strawberry
+                        flavor and creamy topping.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₱130
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Strawberry Cake', 130)">
+
+                            Add +
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <section id="cart-section" class="cart-section">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                YOUR ORDER
+            </p>
+
+            <h2>
+                🛒 Shopping Cart
+            </h2>
+
+        </div>
+
+
+        <div id="cart">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-summary">
+
+            <h3 id="total">
+                Total: ₱0
+            </h3>
+
+            <button
+                class="checkout-button"
+                onclick="checkout()">
+
+                Checkout
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="contact-container">
+
+
+            <div class="contact-info">
+
+                <p class="eyebrow">
+                    CONTACT US
+                </p>
+
+                <h2>
+                    Let's have<br>
+                    a coffee!
+                </h2>
+
+                <p>
+                    Have questions or want to visit us?
+                    Send us a message.
+                </p>
+
+
+                <div class="contact-details">
+
+                    <p>
+                        📍 Mandaue City, Cebu
+                    </p>
+
+                    <p>
+                        📞 0912-345-6789
+                    </p>
+
+                    <p>
+                        📧 dsunnycafe@gmail.com
+                    </p>
+
+                    <p>
+                        🕐 Monday - Saturday: 8 AM - 8 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form id="contact-form">
+
+                <label for="name">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required>
+
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Write your message..."
+                    required></textarea>
+
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            ☀️ D' Sunny Café
+        </h3>
+
+        <p>
+            A little sunshine in every cup.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="Index.html">
+                Home
+            </a>
+
+            <a href="#menu">
+                Menu
+            </a>
+
+            <a href="About.html">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 D' Sunny Café. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
